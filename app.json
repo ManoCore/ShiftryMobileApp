@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "Shiftry-app",
-    "slug": "Shiftry-app",
+    "name": "",
+    "slug": "Shiftry",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/LOGO-VERTICAL.png",
+    "backgroundColor": "#FFFFFF",
     "scheme": "shiftryapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -14,7 +15,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FFFFFF"
       },
       "edgeToEdgeEnabled": true
     },
@@ -29,9 +30,9 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "imageWidth": 300,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#FFFFFF" 
         }
       ],
       "expo-secure-store"
