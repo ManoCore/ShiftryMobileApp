@@ -85,7 +85,7 @@ export const addCommentToPost = (postId, comment) =>
 export const deletePost = (postId) => API.delete(`/newsfeed/posts/${postId}`);
 
 // ========================== NOTIFICATIONS ==========================
-export const fetchNotifications = async () => {
+export const fetchNotifications = async (id: string) => {
   try {
     const { data } = await API.get('/api/notifications');
     return data;
@@ -94,7 +94,7 @@ export const fetchNotifications = async () => {
     throw error;
   }
 };
-export const fetchUnreadNotificationCount = async () => {
+export const fetchUnreadNotificationCount = async (id: string) => {
   try {
     const { data } = await API.get('/api/notifications/unread');
     return data;
@@ -105,9 +105,9 @@ export const fetchUnreadNotificationCount = async () => {
 };
 export const createNotification = (data) => API.post('/api/notifications', data);
 export const markNotificationAsRead = (id) => API.put(`/api/notifications/${id}/read`);
-export const markAllNotificationsAsRead = () => API.put('/api/notifications/read-all');
+export const markAllNotificationsAsRead = (id: string) => API.put('/api/notifications/read-all');
 export const deleteNotification = (id) => API.delete(`/api/notifications/${id}`);
-export const clearAllNotifications = () => API.delete('/api/notifications');
+export const clearAllNotifications = (id: string) => API.delete('/api/notifications');
 
 // ========================== LEAVE ==========================
 export const submitLeaveApplication = (leaveData) => API.post('/api/leave', leaveData);
